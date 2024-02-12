@@ -96,3 +96,27 @@ document.querySelectorAll(".elem").forEach(function(elem){
         }); 
     });
 });
+
+
+function updateDynamicTime() {
+    const footerTimeElement = document.getElementById('footer_time');
+    const currentTime = new Date();
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+
+    // Convert hours to 12-hour format
+    const formattedHours = hours % 12 || 12;
+
+    // Add leading zero to minutes if needed
+    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+
+    // Update the element content
+    footerTimeElement.textContent = `${formattedHours}:${formattedMinutes} ${ampm} EST`;
+}
+
+// Call the function initially to set the initial time
+updateDynamicTime();
+
+// Update the time every second
+setInterval(updateDynamicTime, 1000);
