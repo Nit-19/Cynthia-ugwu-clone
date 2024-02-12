@@ -112,12 +112,15 @@ html,body{
 
 
 #smallHeading{
+    position: absolute;
+    right: 0%;
     display: flex;
     flex-direction: column;
     align-items: end;
     margin-top: 150px;
     padding-right: 50px;
     line-height: 1.5;
+    bottom: 7%;
 }
 
 
@@ -159,9 +162,7 @@ html,body{
     height: 26px;
     border-radius: 50%;
     background-color: #888;
-    color: black;
-    margin-right: 15px;
-    
+    color: black;  
 }
 
 #secondPage {
@@ -253,17 +254,20 @@ html,body{
     background-color: black;
     padding: 20px 30px;
     padding-bottom: 7vw;
+    
 }
 
 #subscribe h5{
     text-transform: uppercase;
     opacity: 0.6;
+
 }
 
 #subscribe h3{
     text-transform: uppercase;
     font-size: 14px;
     margin-top: 10px;
+    line-height: 3;
 }
 
 #footer{
